@@ -1,7 +1,7 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
 
     // Массивы с названиями цветов и животных
@@ -9,8 +9,16 @@ public class Main {
     private static final String[] ANIMALS = {"Крыса", "Корова", "Тигр", "Заяц", "Дракон", "Змея", "Лошадь", "Овца", "Обезьяна", "Курица", "Собака", "Свинья"};
 
     public static void main(String[] args) {
-        int year = 2016; // любой год
+        Scanner scanner = new Scanner(System.in);
+
+        // Ввод года пользователем
+        System.out.print("Введите год: ");
+        int year = scanner.nextInt();
+
+        // Вывод названия года по восточному календарю
         System.out.println(getYearName(year));
+
+        scanner.close();
     }
 
     // Метод для получения названия года по восточному календарю
